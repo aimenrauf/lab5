@@ -21,20 +21,15 @@ class CicularLinkedList:
     def delete(self,data):
         current = self.head
         prev = None
-
-        # If the node to delete is the head
         if current.data == data:
-            # Find the last node to update its next reference
             while current.next != self.head:
                 current = current.next
-            if self.head == self.head.next:  # Single node case
+            if self.head == self.head.next:  
                 self.head = None
             else:
-                current.next = self.head.next  # Last node now points to new head
-                self.head = self.head.next  # Update head
+                current.next = self.head.next  
+                self.head = self.head.next 
             return
-
-        # For deleting non-head nodes
         current = self.head
         while current.next != self.head:
             prev = current
