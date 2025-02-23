@@ -33,6 +33,5 @@ link = CicularLinkedList()
 data = ["Lab tasks","Home tasks","watching Tv"]
 for n in data:
     link.append(n)
-print("tasks are repeating 3 times.")
 link.display()
 link.execute(10)
